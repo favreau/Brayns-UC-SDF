@@ -1,0 +1,48 @@
+/* Copyright (c) 2021, Cyrille Favreau
+ * All rights reserved. Do not distribute without permission.
+ * Responsible Author: Cyrille Favreau <cyrille.favreau@gmail.com>
+ *
+ * This file is part of the reseach Brayns module
+ * <https://github.com/favreau/Brayns-UC-SDF>
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License version 3.0 as published
+ * by the Free Software Foundation.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+#include <ospray/SDK/math/vec.ih>
+
+// Geometry
+float sdCappedCone(const vec3f& p, const vec3f& c);
+float sdTorus(const vec3f& p, const vec3f& t);
+float sdBox(const vec3f& p, const vec3f& b);
+float sdSphere(const vec3f& p, const vec3f& s);
+float sdCapsule(const vec3f& p, const vec3f& a, const vec3f& b, float r);
+float sdEquilateralTriangle(const vec2f& p);
+float sdTriPrism(const vec3f& p, const vec2f& h);
+float sdCylinder(const vec3f& p, const vec3f& h);
+float udRoundBox(const vec3f& p, const vec3f& b, float r);
+float sdEllipsoid(const vec3f& p, const vec3f& r);
+float sdTorus82(const vec3f& p, const vec2f& t);
+
+// Operations
+float opS(const float d1, const float d2);
+vec2f opU(const vec2f a, const vec2f b);
+vec3f opRep(const vec3f& p, const vec3f& c);
+float opBlend(const float a, const float b);
+vec3f opTwist(const vec3f& p);
+float opDisplacement(const vec3f& p);
+
+// Utils
+float smin(const float a, const float b, const float k);
+float length8(const vec2f& v);
+float maxcomp(const vec3f& p);
